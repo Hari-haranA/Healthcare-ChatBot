@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <title>Healthcare Chatbot</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="bot-name">
+                <img src="{{ url_for('static', filename='avatar.png') }}" alt="Healthcare Chatbot Avatar">
+                Healthcare Chatbot
+            </div>
+            <button id="exit-button" onclick="exitChat()" title="Exit Chat"></button>
+        </div>
+        <div class="chat-window" id="chat-window">
+            <!-- Welcome message -->
+            <div class="chat-bubble bot">
+                <div class="bot-avatar">
+                    <img src="{{ url_for('static', filename='avatar.png') }}" alt="Healthcare Chatbot Avatar" style="width: 22.5px; height: 22.5px;">
+                </div>
+                <p>
+                    Welcome, dear {{ name }}! I am an AI healthcare assistant.
+                    Kindly tell your symptoms, separated by commas, for disease diagnosis.
+                </p>
+            </div>
+
+            <!-- Previous chat history -->
+            {% for message in chat_history %}
+                <div class="chat-bubble {{ message.sender }}">
+                    {% if message.sender == 'user' %}
+                        <div class="user-avatar"></div>
+                    {% else %}
+                        <div class="bot-avatar"></div>
+                    {% endif %}
+                    <p>{{ message.text }}</p>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="input-bar">
+            <textarea id="user-input" placeholder="Type your query here..." oninput="autoExpand(this)"></textarea>
+            <button id="send-button" onclick="sendMessage()" onmouseover="this.style.height='auto'; this.style.height = (this.scrollHeight) + 'px';" onmouseout="this.style.height='auto';"></button>
+        </div>
+    </div>
+
+    <script>
+        function exitChat() {
+            // Redirect to the "/chat_closed" route
+            window.location.href = "/chat_closed";
+        }
+
+        function autoExpand(element) {
+            element.style.height = 'auto';
+            element.style.height = (element.scrollHeight) + 'px';
+        }
+    </script>
+</body>
+</html>

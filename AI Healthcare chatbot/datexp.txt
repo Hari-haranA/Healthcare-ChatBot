@@ -1,0 +1,39 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+import seaborn as sns
+df = pd.read_csv('DatasetWithSymptomsCleaned.csv')
+# Display basic information about the DataFrame
+print(df.info())
+# Display summary statistics for numeric columns
+print(df.describe())
+# Check for missing values in each column
+print(df.isnull().sum())
+
+# Handle missing values (e.g., drop rows with missing data)
+df = df.dropna()
+df['numeric_column'].plot(kind='hist', bins=20)
+plt.xlabel('X-axis label')
+plt.ylabel('Y-axis label')
+plt.title('Histogram')
+plt.show()
+sns.countplot(x='categorical_column', data=df)
+plt.xlabel('X-axis label')
+plt.ylabel('Y-axis label')
+plt.title('Bar Chart')
+plt.xticks(rotation=45)
+plt.show()
+sns.boxplot(x='category_column', y='numeric_column', data=df)
+plt.xlabel('X-axis label')
+plt.ylabel('Y-axis label')
+plt.title('Box Plot')
+plt.show()
+sns.scatterplot(x='numeric_column1', y='numeric_column2', data=df)
+plt.xlabel('X-axis label')
+plt.ylabel('Y-axis label')
+plt.title('Scatter Plot')
+plt.show()
+corr_matrix = df.corr()
+sns.heatmap(corr_matrix, annot=True, cmap='coolwarm')
+plt.title('Correlation Matrix')
+plt.show()
+

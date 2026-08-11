@@ -1,0 +1,202 @@
+body1 {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;  /* Light grey background */
+    margin: 0;
+    color: #fff;  /* White text color */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+} .container1 {
+    width: 400px;
+    margin: 50px auto;
+    background-color: #f5f5f5;  /* Navy blue container background */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.header1 {
+    background-color: #001a33;  /* Slightly darker navy blue header background */
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 2px solid #00152a;  /* Slightly darker navy blue border */
+}
+
+.user-details {
+    padding: 20px;
+    text-align: center;
+}
+
+.user-details form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group input {
+    padding: 10px;
+    border: 1px solid #00152a;  /* Slightly darker navy blue border */
+    border-radius: 7px;
+    background-color: #f5f5f5;  /* Light grey background */
+    color: #001f3f;  /* Navy blue text color */
+    margin-bottom: 5px;
+}
+
+.input-group label {
+    font-size: 14px;
+    color: #00152a;  /* Slightly darker navy blue text color */
+}
+
+.input-group input:focus {
+    border-color: #001f3f;  /* Navy blue border on focus */
+}
+
+.btn {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #27ae60;  /* Green button color */
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #219d54;  /* Slightly darker green on hover */
+}
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            color: #333;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background-color: #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background-color: #001f3f; /* Navy Blue */
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            border-bottom: 2px solid #001a33; /* Slightly darker blue */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .bot-name {
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .bot-name img {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        #exit-button {
+            background-color: #e74c3c;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        #exit-button:hover::before {
+            content: "Exit Chat";
+        }
+
+        .chat-window {
+            flex: 1;
+            overflow-y: scroll;
+            padding: 20px;
+        }
+
+        .chat-bubble {
+            margin-bottom: 10px;
+            padding: 15px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            word-wrap: break-word; /* Allow multiline text to break properly */
+        }
+
+        .chat-bubble.user {
+            background-color: #2ecc71; /* Light Green */
+            color: #fff;
+            justify-content: flex-end;
+        }
+
+        .chat-bubble.bot {
+            background-color: #3498db; /* Light Blue */
+            color: #fff;
+            justify-content: flex-start;
+        }
+
+        .user-avatar, .bot-avatar {
+            border-radius: 50%;
+            margin: 0 10px;
+        }
+
+        .user-avatar {
+            width: 30px;
+            height: 30px;
+        }
+
+        .input-bar {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        #user-input {
+            flex-grow: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            resize: none;
+            overflow: hidden;
+            transition: height 0.3s;
+        }
+
+        #send-button {
+            padding: 8px;
+            border: none;
+            border-radius: 8px;
+            background-color: #27ae60; /* Green */
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-size: 16px;
+        }
+
+        #send-button:hover::before {
+            content: "Send Query";
+        }
+    

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Healthcare Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script>
+        function startChat() {
+            // Redirect to the chat page after form submission
+            var name = document.getElementById('name').value;
+            var age = document.getElementById('age').value;
+            window.location.href = "/chat?name=" + encodeURIComponent(name) + "&age=" + encodeURIComponent(age);
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Healthcare Chatbot</h1>
+        </div>
+        <div class="user-details">
+            <form onsubmit="startChat(); return false;">
+                <div class="input-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="age">Age</label>
+                    <input type="number" id="age" name="age" placeholder="Enter your age" required>
+                </div>
+
+                <button type="submit" class="btn">Start Chat</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,4 @@
+scatter_plot.jpg: Scatter plot showing the relationship between actual and predicted values.
+residual_plot.jpg: Residual plot showing the distribution of residuals.
+coefficients.csv: CSV file containing the coefficients for each feature in the linear regression model.
+linear_regression_report.jpg: Report containing information about the model, including coefficients, plots, and scores.

@@ -1,0 +1,19 @@
+Linear Regression: This is one of the simplest machine learning algorithms. It assumes a linear relationship between the input and output variables12.
+
+Decision Trees: These are easy to interpret and can handle non-linear relationships2.
+
+Random Forest: This is an ensemble method that can handle non-linear relationships and is less prone to overfitting2.
+
+Gradient Boosting: This is another powerful ensemble method that can be used for both classification and regression2.
+
+Neural Networks: These are particularly useful for complex problems with large amounts of data2.
+
+Transformers: These have become a revolutionary methodology in Natural Language Processing (NLP), powering, amongst many other examples, the autoregressive language model and AI poster-child GPT-33.
+
+Autoregressive Integrated Moving Average (ARIMA): This is a popular algorithm for time series forecasting4.
+
+XGBoost: This is a gradient boosting framework that is often used for structured or tabular data4.
+
+Prophet: This is a procedure for forecasting time series data based on an additive model where non-linear trends are fit with yearly, weekly, and daily seasonality, plus holiday effects4.
+
+Long Short-Term Memory (LSTM): This is a type of recurrent neural network that is often used for sequence prediction problems4
